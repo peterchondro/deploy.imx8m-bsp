@@ -99,11 +99,6 @@ $ EULA=1 [MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./imx-setup-relea
   ```
   $ EULA=1 MACHINE=imx8mpevk DISTRO=fsl-imx-xwayland source ./imx-setup-release.sh -b buildxwayland
   ```
-Update local config setting:
-```
-$ sudo vim ~/"your_release_name/buildxwayland/conf/local.conf
-  -> IMAGE_INSTALL_append = "packagegroup-imx-ml"
-```
 Build BSP release:
 ```
 $ bitbake imx-image-full
