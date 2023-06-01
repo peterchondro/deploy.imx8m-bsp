@@ -31,6 +31,7 @@ $ sudo apt-get install pylint3
 [Optional] Should your Ubuntu system defaultly use Python >= 3.7, you need to establish Python 3.7 as update alternatives:
   ```
   $ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+  $ sudo update-alternatives --config python3
   ```
 ### Java Development Kit Installation
 This setup recommends the installation of Java SE Development Kit 8u191.
@@ -83,10 +84,10 @@ Execute the RT in your machine:
 ```
 $ mkdir "your_release_name"
 $ cd "your_release_name"
-$ repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-hardknott [ -m <release manifest>]
+$ repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale [ -m <release manifest>]
 $ repo sync
 ```
-[Optional] To find your release manifest, please visit https://github.com/nxp-imx/imx-manifest/tree/imx-linux-hardknott or for this setup, you can use imx-6.1.1-1.0.1, which is:
+[Optional] To find your release manifest, please visit https://github.com/nxp-imx/imx-manifest/tree/imx-linux-langdale or for this setup, you can use imx-6.1.1-1.0.1, which is:
   ```
   $ repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale -m imx-6.1.1-1.0.1.xml
   ```
