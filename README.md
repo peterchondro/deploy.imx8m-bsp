@@ -95,7 +95,7 @@ Please setup the build folder for a BSP release:
 ```
 $ EULA=1 [MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./imx-setup-release.sh -b bld-<backend>
 ```
-[Optional] Please see imx-manifest/README-<demo> in https://github.com/nxp-imx/imx-manifest/tree/imx-linux-hardknott for further instructions or for this setup, you can use imx8mpevk or i.MX 8M Plus as:
+[Optional] Please see imx-manifest/README-<demo> in https://github.com/nxp-imx/imx-manifest/tree/imx-linux-langdale for further instructions or for this setup, you can use imx8mpevk or i.MX 8M Plus as:
   ```
   $ EULA=1 MACHINE=imx8mpevk DISTRO=fsl-imx-xwayland source ./imx-setup-release.sh -b buildxwayland
   ```
