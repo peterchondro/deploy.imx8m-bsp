@@ -2,7 +2,7 @@
 Preparing relevant environment to built on i.MX8M Plus BSP
 
 # Prerequisite
-1. OS Ubuntu >=20.04 LTS with HDD >= 500GB and Python3.7.
+1. OS Ubuntu >=20.04 LTS with HDD >= 500GB and Python 3.7.
 2. i.MX8M Plus BSP.
 3. Micro SD Card >= 16GB.
 4. Other Supporting Cables.
@@ -28,7 +28,7 @@ $ sudo apt-get install pylint3
   $ cd /usr/bin/
   $ sudo ln -s pylint pylint3
   ```
-[Optional] Should your Ubuntu system defaultly use Python >= 3.7, you need to establish Python 3.7 as update alternatives:
+[Optional] Should your Ubuntu system defaultly use Python!=3.7, you need to establish Python 3.7 as update alternatives:
   ```
   $ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
   $ sudo update-alternatives --config python3
