@@ -14,7 +14,7 @@ Please follow these steps to setup your Linux environment to support i.MX8M Plus
 ```
 $ sudo apt update
 $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio mlocate vim
-$ sudo apt-get install libegl1-mesa libsdl1.2-dev xterm curl liblz4-tool
+$ sudo apt-get install libegl1-mesa libsdl1.2-dev xterm curl liblz4-tool zstd
 $ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev wget libbz2-dev
 $ sudo apt-get install python-is-python3 python3-pexpect python3-git python3-jinja2 xz-utils debianutils iputils-ping python3-pip
 $ sudo apt-get install python3-distutils 
@@ -75,7 +75,7 @@ Install Repository Tool in your machine:
 ```
 $ cd ~
 $ mkdir ~/bin
-$ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+$ curl http://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $ chmod a+x ~/bin/repo
 $ export PATH=~/bin:$PATH
 ```
