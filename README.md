@@ -68,8 +68,8 @@ $ sudo update-alternatives --config javaws
 ### Setup Manifest for i.MX BSP Release
 Please setup your GitHub account in your terminal (if you haven't done):
 ```
-$ git config --global user.name "user name"
-$ git config --global user.email user.name@your-group.com
+$ git config --global user.name "your user name"
+$ git config --global user.email "your user's email address"
 ```
 Install Repository Tool in your machine:
 ```
