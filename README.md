@@ -2,7 +2,7 @@
 Preparing relevant environment to built on i.MX8M Plus BSP
 
 # Prerequisite
-1. OS Ubuntu >=20.04 LTS with HDD >= 500GB and Python 3.7.
+1. OS Ubuntu 20.04 LTS with HDD >= 500GB and Python 3.8.
 2. i.MX8M Plus BSP.
 3. Micro SD Card >= 16GB.
 4. Other Supporting Cables.
@@ -13,8 +13,8 @@ Please follow these steps to setup your Linux environment to support i.MX8M Plus
 ### Base Dependencies Installation
 ```
 $ sudo apt update
-$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio plocate vim
-$ sudo apt-get install libegl1-mesa libsdl1.2-dev xterm curl repo liblz4-tool
+$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio mlocate vim
+$ sudo apt-get install libegl1-mesa libsdl1.2-dev xterm curl liblz4-tool
 $ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev wget libbz2-dev
 $ sudo apt-get install python-is-python3 python3-pexpect python3-git python3-jinja2 xz-utils debianutils iputils-ping python3-pip
 $ sudo apt-get install python3-distutils 
@@ -27,9 +27,9 @@ $ sudo apt-get install pylint3
   $ cd /usr/bin/
   $ sudo ln -s pylint pylint3
   ```
-[Optional] Should your Ubuntu system defaultly use Python!=3.7, you need to establish Python 3.7 as update alternatives:
+[Optional] Should your Ubuntu system defaultly use Python!=3.8, you need to establish Python 3.8 as update alternatives:
   ```
-  $ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+  $ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
   $ sudo update-alternatives --config python3
   ```
 ### Java Development Kit Installation
