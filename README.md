@@ -17,8 +17,8 @@ $ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib bu
 $ sudo apt-get install libegl1-mesa libsdl1.2-dev xterm curl repo liblz4-tool
 $ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev wget libbz2-dev
 $ sudo add-apt-repository ppa:deadsnakes/ppa
-$ sudo apt-get install python-is-python3.7 python3.7-pexpect python3.7-git python3.7-jinja2 xz-utils debianutils iputils-ping python3.7-pip
-$ sudo apt-get install python3.7-distutils 
+$ sudo apt-get install python-is-python3 python3-pexpect python3-git python3-jinja2 xz-utils debianutils iputils-ping python3-pip
+$ sudo apt-get install python3-distutils 
 $ sudo apt-get install pylint3
 ```
 [Optional] Should your Ubuntu system does not recognize pylint3, you may install pylint and create a symlink to replace pylint3 with pylint:
