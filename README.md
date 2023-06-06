@@ -117,6 +117,7 @@ $ sudo vim "your_project_name"/buildxwayland/conf/local.conf
     -> BB_NUMBER_THREADS = "6"
     -> PARALLEL_MAKE = "-j 6"
   ```
+  
 Build BSP release:
 ```
 $ bitbake imx-image-full
@@ -130,6 +131,7 @@ You could do the following:
   $ bitbake -f -c cleanall "name_of_the_package_with_the_same_error"
   $ bitbake imx-image-full
   ```
+  
 Build SDK:
 ```
 $ bitbake imx-image-full -c populate_sdk
