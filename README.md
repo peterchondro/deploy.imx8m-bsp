@@ -135,5 +135,9 @@ You could do the following:
 Build SDK:
 ```
 $ bitbake imx-image-full -c populate_sdk
+```
+Install SDK:
+```
 $ ./"your_project_name"/buildxwayland/tmp/deploy/sdk/fsl-imx-xwayland-glibc-x86_64-imx-image-full-aarch64-imx8mpevk-toolchain-5.4-zeus.sh
 ```
+By default, your SDK will be installed in ```opt``` but you can customize this location.
