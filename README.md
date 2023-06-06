@@ -2,11 +2,15 @@
 Preparing relevant environment to built on i.MX8M Plus BSP
 
 # Prerequisite
-1. OS Ubuntu 20.04 LTS with HDD >= 500GB and Python 3.8.
+1. OS Ubuntu 18.04 LTS with HDD >= 500GB.
 2. i.MX8M Plus BSP.
 3. Micro SD Card >= 16GB.
 4. Other Supporting Cables.
 5. Internet Connection.
+
+It is important to pay attention on OS Ubuntu 18.04 LTS and your HDD/SSD storage capacity.
+Using Ubuntu >18 will result in failure to build the BSP release due to incompactibilities in its kernel (no change in BSP release >=6).
+Using HDD/SSD <500GB may result in failure to build the BSP release as it requires a lot of space.
 
 # Setup Instructions
 Please follow these steps to setup your Linux environment to support i.MX8M Plus BSP:
@@ -86,9 +90,9 @@ $ cd "your_release_name"
 $ repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale [ -m <release manifest>]
 $ repo sync
 ```
-[Optional] To find your release manifest, please visit https://github.com/nxp-imx/imx-manifest/tree/imx-linux-langdale or for this setup, you can use imx-6.1.1-1.0.1, which is:
+[Optional] To find your release manifest, please visit https://github.com/nxp-imx/imx-manifest/tree/imx-linux-langdale or for this setup, you can use imx-5.10.72-2.2.3, which is:
   ```
-  $ repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale -m imx-6.1.1-1.0.1.xml
+  $ repo init -u https://github.com/nxp-imx/imx-manifest  -b imx-linux-hardknott -m imx-5.10.72-2.2.3.xml
   ```
 Please setup the build folder for a BSP release:
 ```
