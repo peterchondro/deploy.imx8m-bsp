@@ -141,3 +141,19 @@ Install SDK:
 $ ./"your_project_name"/buildxwayland/tmp/deploy/sdk/fsl-imx-xwayland-glibc-x86_64-imx-image-full-aarch64-imx8mpevk-toolchain-5.4-zeus.sh
 ```
 By default, your SDK will be installed in ```opt``` but you can customize this location.
+Every time you open a new terminal/shell, please source this SDK as follows:
+```
+$ source /opt/fsl-imx-xwayland/5.10-hardknott/environment-setup-cortexa53-crypto-poky-linux
+```
+  
+### Deploy SDK image into i.MX8M Plus platform:
+Prepare your SD card and plug in to your host PC. Find and define the location of your SD card:
+```
+$ export DEVSD=/dev/sdb
+```
+Deploy your SDK image:
+```
+$ cd "your_project_name"/buildxwayland/tmp/deploy/images/imx8mpevk
+$ bunzip2 -dk -f imx8mpevk.wic.bz2
+$ sudo dd if=imx-image-full-imx8mpevk.wic of=${DEVSD} bs=1M && sync
+```
