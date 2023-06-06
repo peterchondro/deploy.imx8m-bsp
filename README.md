@@ -145,9 +145,13 @@ Every time you open a new terminal/shell, please source this SDK as follows:
 ```
 $ source /opt/fsl-imx-xwayland/5.10-hardknott/environment-setup-cortexa53-crypto-poky-linux
 ```
+### Setup your platform:
+Please visit this website: https://www.nxp.com/document/guide/getting-started-with-the-i-mx-8m-plus-evk:GS-iMX-8M-Plus-EVK
   
 ### Deploy SDK image into i.MX8M Plus platform:
-Prepare your SD card and plug in to your host PC. Find and define the location of your SD card:
+Prepare your SD card and plug in to your host PC. 
+It is better to format your SD card first as FAT format before any further step.
+Find and define the location of your SD card:
 ```
 $ export DEVSD=/dev/sdb
 ```
@@ -158,7 +162,7 @@ $ bunzip2 -dk -f imx8mpevk.wic.bz2
 $ sudo dd if=imx-image-full-imx8mpevk.wic of=${DEVSD} bs=1M && sync
 ```
 
-### Implement Patch Update:
+### Implement patch update:
 There had been an issue regarding the failure of USB-C power supply port and the issue could be patch by doing this:
 ```
 $ cd "~/your_project_name"/buildxwayland/tmp/work-shared/imx8mpevk/kernel-source/arch/arm64/boot/dts/freescale/
