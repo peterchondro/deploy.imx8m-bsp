@@ -161,9 +161,13 @@ $ sudo dd if=imx-image-full-imx8mpevk.wic of=${DEVSD} bs=1M && sync
 ### Implement Patch Update:
 There had been an issue regarding the failure of USB-C power supply port and the issue could be patch by doing this:
 ```
-$ cd "your_project_name"/buildxwayland/tmp/work-shared/imx8mpevk/kernel-source/arch/arm64/boot/dts/freescale/
+$ cd "~/your_project_name"/buildxwayland/tmp/work-shared/imx8mpevk/kernel-source/arch/arm64/boot/dts/freescale/
 $ sudo vim imx8mp-evk.dts
   -> (line 497) source-pdos = <PDO_FIXED(20000, ..."no change"...
   -> (line 498) sink-pdos = <PDO_FIXED(20000, ..."no change" ...
   -> (line 499) PDO_VAR(5000, 20000, ..."no change"...
+$ cd ~/"your_project_name"/buildxwayland/
+$ bitbake -c compile -f linux-imx
+$ bitbake -c deploy -f linux-imx
 ```
+After this step, you'll need to re-install SDK and re-deploy your SDK image once again.
