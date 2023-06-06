@@ -114,8 +114,8 @@ $ sudo vim "your_project_name"/buildxwayland/conf/local.conf
   Take that number of CPU thread and you may take just 50%. For example, if you have 12 threads, you may use 6 and do as follows:
   ```
   $ sudo vim "your_project_name"/buildxwayland/conf/local.conf
-  BB_NUMBER_THREADS = "6"
-  PARALLEL_MAKE = "-j 6"
+    -> BB_NUMBER_THREADS = "6"
+    -> PARALLEL_MAKE = "-j 6"
   ```
 Build BSP release:
 ```
@@ -124,8 +124,8 @@ $ bitbake imx-image-full
 If you encounter this error exit 1, you can just simply run the bitbake again and it will resume from the point you stop.
 You may need to repeat resuming bitbake for several time depending on your hardware situation.
 
-[Optional] If you encounter the same error, even though you have resume bitbake for several time.
-You can do the following:
+[Optional] If you encountered an occuring error, even though you had been resuming bitbake for several time.
+You could do the following:
   ```
   $ bitbake -f -c cleanall "name_of_the_package_with_the_same_error"
   $ bitbake imx-image-full
