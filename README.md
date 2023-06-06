@@ -130,3 +130,8 @@ You could do the following:
   $ bitbake -f -c cleanall "name_of_the_package_with_the_same_error"
   $ bitbake imx-image-full
   ```
+Build SDK:
+```
+$ bitbake imx-image-full -c populate_sdk
+$ ./"your_project_name"/buildxwayland/tmp/deploy/sdk/fsl-imx-xwayland-glibc-x86_64-imx-image-full-aarch64-imx8mpevk-toolchain-5.4-zeus.sh
+```
