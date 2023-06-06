@@ -85,12 +85,12 @@ $ export PATH=~/bin:$PATH
 ```
 Execute the RT in your machine:
 ```
-$ mkdir "your_release_name"
-$ cd "your_release_name"
+$ mkdir "your_project_name"
+$ cd "your_project_name"
 $ repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale [ -m <release manifest>]
 $ repo sync
 ```
-[Optional] To find your release manifest, please visit https://github.com/nxp-imx/imx-manifest/tree/imx-linux-langdale or for this setup, you can use imx-5.10.72-2.2.3, which is:
+[Recommendation] To find your release manifest, please visit https://github.com/nxp-imx/imx-manifest/tree/imx-linux-langdale or for this setup, you can use imx-5.10.72-2.2.3, which is:
   ```
   $ repo init -u https://github.com/nxp-imx/imx-manifest  -b imx-linux-hardknott -m imx-5.10.72-2.2.3.xml
   ```
@@ -98,9 +98,24 @@ Please setup the build folder for a BSP release:
 ```
 $ EULA=1 [MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./imx-setup-release.sh -b bld-<backend>
 ```
-[Optional] Please see imx-manifest/README-<demo> in https://github.com/nxp-imx/imx-manifest/tree/imx-linux-langdale for further instructions or for this setup, you can use imx8mpevk or i.MX 8M Plus as:
+[Recommendation] Please see imx-manifest/README-<demo> in https://github.com/nxp-imx/imx-manifest/tree/imx-linux-langdale for further instructions or for this setup, you can use imx8mpevk or i.MX 8M Plus as:
   ```
   $ EULA=1 MACHINE=imx8mpevk DISTRO=fsl-imx-xwayland source ./imx-setup-release.sh -b buildxwayland
+  ```
+Prior to building BSP Release, please modify the local configuration file:
+  ```
+  $ sudo vim "your_project_name"/buildxwayland/conf/local.conf
+    -> IMAGE_INSTALL_append = "packagegroup-imx-ml"
+  ```
+[Optional] To avoid CPU exhaustion during build process for the BSP release, you are strongly advised to limit the number of threads. You can check how many CPU threads you have with:
+  ```
+  $ lscpu | egrep 'CPU\(s\)'
+  ```
+  Take that number of CPU thread and you may take just 50%. For example, if you have 12 threads, you may use 6 and do as follows:
+  ```
+  $ sudo vim "your_project_name"/buildxwayland/conf/local.conf
+  BB_NUMBER_THREADS = "6"
+  PARALLEL_MAKE = "-j 6"
   ```
 Build BSP release:
 ```
