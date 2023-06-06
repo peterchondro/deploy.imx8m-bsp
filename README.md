@@ -157,3 +157,13 @@ $ cd "your_project_name"/buildxwayland/tmp/deploy/images/imx8mpevk
 $ bunzip2 -dk -f imx8mpevk.wic.bz2
 $ sudo dd if=imx-image-full-imx8mpevk.wic of=${DEVSD} bs=1M && sync
 ```
+
+### Implement Patch Update:
+There had been an issue regarding the failure of USB-C power supply port and the issue could be patch by doing this:
+```
+$ cd "your_project_name"/buildxwayland/tmp/work-shared/imx8mpevk/kernel-source/arch/arm64/boot/dts/freescale/
+$ sudo vim imx8mp-evk.dts
+  -> (line 497) source-pdos = <PDO_FIXED(20000, ..."no change"...
+  -> (line 498) sink-pdos = <PDO_FIXED(20000, ..."no change" ...
+  -> (line 499) PDO_VAR(5000, 20000, ..."no change"...
+```
