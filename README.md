@@ -1,4 +1,4 @@
-# deploy.imx8m-bsp
+# Purpose of Repository
 Preparing relevant environment to built on i.MX8M Plus BSP
 
 # Prerequisite
